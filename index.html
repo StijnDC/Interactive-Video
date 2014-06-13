@@ -20,9 +20,10 @@
   ================================================== -->
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/base.css" />
+	<link rel="stylesheet" href="stylesheets/skeleton.css" />
+	<link rel="stylesheet" href="stylesheets/layout.css" />
+	<link rel="stylesheet" href="stylesheets/video.css" />
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,10 +31,10 @@
 
 	<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
 
 </head>
 <body>
@@ -86,13 +87,23 @@ onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=
     
 <div id="ContentWrapper">
 <div id="video">
+	<video id="video1" class="vcontainer" >
+		<source src="testvideo1.mp4" />
+		uw browser ondersteunt video niet
+	</video>
+	<video id="video2" class="vcontainer" >
+		<source src="testvideo2.mp4" />
+		uw browser ondersteunt video niet
+	</video>
+	<canvas id="ruis" class="vcontainer"></canvas>
+
 </div>
 <div id="controls">
 	<div id="playpause"></div>
-	<input id="progress" type="range"></input>
+	<input id="progress" type="range" min="0" max="100" value="0" ></input>
 <div id="mutebutton"></div>
-<input id="volume" type="range"></input>
-<div id="switch">SWITCH</div>
+<input id="volume" type="range" min="0" max="100" value="100"></input>
+<div id="switch" onclick="playNoise()">SWITCH</div>
 
 </div>
 
@@ -162,6 +173,6 @@ onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=
 	</div><!-- container -->
 <!-- End Document
 ================================================== -->
-
+<script src="ruis.js"></script>
 </body>
 </html>

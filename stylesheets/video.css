@@ -1,0 +1,30 @@
+.vcontainer{
+    width: 1280px;
+    height: 720px;
+
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+
+    /*border: solid 1px black;*/
+    position: relative;
+}
+
+#video{
+	margin-top: 120px;
+}
+
+#video1{
+    margin-top: 0px;
+    /*top: 0px;*/
+}
+
+#video2{
+    margin-top: -720px;
+    /*top: -200px;*/
+}
+
+#ruis{
+    margin-top: -720px;
+    /*top: -400px;*/
+}
