@@ -24,6 +24,7 @@
 	<link rel="stylesheet" href="stylesheets/skeleton.css" />
 	<link rel="stylesheet" href="stylesheets/layout.css" />
 	<link rel="stylesheet" href="stylesheets/video.css" />
+	<link rel="stylesheet" href="stylesheets/mobile.css" />
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -87,7 +88,7 @@ onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=
     
 <div id="ContentWrapper">
 <div id="video">
-	<video id="video1" class="vcontainer" >
+	<video id="video1" class="vcontainer" muted="muted">
 		<source src="testvideo1.mp4" />
 		uw browser ondersteunt video niet
 	</video>
@@ -100,9 +101,9 @@ onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=
 </div>
 <div id="controls">
 	<div id="playpause"></div>
-	<input id="progress" type="range" min="0" max="100" value="0" ></input>
+	<input id="progress" type="range" min="0" max="100" value="0" />
 <div id="mutebutton"></div>
-<input id="volume" type="range" min="0" max="100" value="100"></input>
+<input id="volume" type="range" min="0" max="100" value="100" />
 <div id="switch" onclick="playNoise()">SWITCH</div>
 
 </div>
